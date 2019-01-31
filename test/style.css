@@ -1,0 +1,80 @@
+html,body{
+  font-family: Lato, sans-serif;
+  text-align:center;
+  min-width:300px;
+  background-image: url("https://wallpapertag.com/wallpaper/full/a/0/f/157264-soccer-field-background-1920x1200-ipad-pro.jpg");
+  color:black;
+}
+#main{
+  margin:0 auto;
+  padding:15px;
+}
+/*
+<-- <img id="image-small" src="https://image.freepik.com/free-photo/soccer-ball-in-goal-net-with-soccer-field-background_37328-17.jpg">-->
+.image-small{
+  float:left;
+  height: 100px;
+  width:100px;
+  border:1px solid green;
+  border-radius:10px;
+  margin: auto;
+}*/
+h1{
+  color:white;
+  font-size:60px;
+}
+h2{
+  font-size:30px;
+  color:white;
+  font-style: italic;
+}
+h3{
+  margin:60px 0;
+}
+
+img{
+  max-width: 100%; 
+  display: block; 
+  height: auto;
+  margin: auto;
+}
+#img-div{
+  margin:-5px;
+  margin-top:40px;
+  width:100%;
+}
+#img-caption{
+  margin:20px;
+  font-size:30px;
+  color:white;
+}
+#headline{
+  color:white;
+  margin-top:50px;
+  text-align:left;
+  font-size:30px;
+}
+
+#tribute-info{
+  width:1000px;
+  margin:100px auto;
+}
+
+p{
+  padding:25px;
+  border:5px solid;
+  border-radius:10px;
+  background:#388E3C;
+  min-width:200px;
+  text-align:left;
+  line-height:8vh;
+}
+ul{
+  max-width:550px;
+  margin:0 auto;
+  text-align:left;
+}
+li{
+  margin: 8px;
+  font-size:20px;
+}

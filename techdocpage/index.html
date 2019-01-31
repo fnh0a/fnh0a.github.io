@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+
+      <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <nav id="navbar">
+  <header>Generics in Java Documentation</header>
+  <ul> 
+    <a class="nav-link" href="#Overview" rel="internal"><li>Overview</li></a>
+    <a class="nav-link" href="#Hierarchy and classification" rel="internal"><li>Hierarchy and classification</li></a>
+    <a class="nav-link" href="#Motivation" rel="internal"><li>Motivation</li></a>
+    <a class="nav-link" href="#Generic class definitions" rel="internal"><li>Generic class definitions</li></a>
+    <a class="nav-link" href="#Diamond operator" rel="internal"><li>Diamond operator</li></a>
+    <a class="nav-link" href="#Generics in throws clause" rel="internal"><li>Generics in throws clause</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Overview">
+    <header>Overview</header>
+    <article>  
+      <p>Generics are a facility of generic programming that were added to the Java programming language in 2004 within version J2SE 5.0. They were designed to extend Java's type system to allow “a type or method to operate on objects of various types while providing compile-time type safety”[1]. The aspect compile-time type safety was not fully achieved, since it was shown in 2016 that it is not guaranteed in all cases.</p>
+
+<p>The Java collections framework supports generics to specify the type of objects stored in a collection instance.</p>
+
+<p>In 1998, Gilad Bracha, Martin Odersky, David Stoutamire and Philip Wadler created Generic Java, an extension to the Java language to support generic types.[3] Generic Java was incorporated in Java with the addition of wildcards.</p>
+</artice>
+</section>
+  <section class="main-section" id="Hierarchy and classification">
+    <header>Hierarchy and classification</header>
+    <article>
+      <p>According to Java Language Specification:</p>
+
+      <li>A type variable is an unqualified identifier. Type variables are introduced by generic class declarations, generic interface declarations, generic method declarations, and by generic constructor declarations.</li>
+      <li>A class is generic if it declares one or more type variables. These type variables are known as the type parameters of the class. It defines one or more type variables that act as parameters. A generic class declaration defines a set of parameterized types, one for each possible invocation of the type parameter section. All of these parameterized types share the same class at runtime.</li>
+<li>An interface is generic if it declares one or more type variables. These type variables are known as the type parameters of the interface. It defines one or more type variables that act as parameters. A generic interface declaration defines a set of types, one for each possible invocation of the type parameter section. All parameterized types share the same interface at runtime.</li>
+<li>A method is generic if it declares one or more type variables. These type variables are known as the formal type parameters of the method. The form of the formal type parameter list is identical to a type parameter list of a class or interface.</li>
+<li>A constructor can be declared as generic, independently of whether the class that the constructor is declared in is itself generic. A constructor is generic if it declares one or more type variables. These type variables are known as the formal type parameters of the constructor. The form of the formal type parameter list is identical to a type parameter list of a generic class or interface.</li>
+</artice>
+</section>
+<section class="main-section" id="Motivation">
+    <header>Motivation</header>
+    <article>
+    <p>The following block of Java code illustrates a problem that exists when not using generics. First, it declares an ArrayList of type Object. Then, it adds a String to the ArrayList. Finally, it attempts to retrieve the added String and cast it to an Integer.</p> 
+ <code>List v = new ArrayList();
+v.add("test");
+Integer i = (Integer)v.get(0); // Run time error</code>
+<p>Although the code is compiled without error, it throws a runtime exception (java.lang.ClassCastException) when executing the third line of code. This type of problem can be avoided by using generics and is the primary motivation for using generics.Using generics, the above code fragment can be rewritten as follows:</p>
+  <code>List<String> v = new ArrayList<String>();
+v.add("test");
+Integer i = v.get(0); // (type error)  compilation-time error</code>
+<p>The type parameter String within the angle brackets declares the ArrayList to be constituted of String (a descendant of the ArrayList's generic Object constituents). With generics, it is no longer necessary to cast the third line to any particular type, because the result of v.get(0) is defined as String by the code generated by the compiler.</p>
+
+<p>Compiling the third line of this fragment with J2SE 5.0 (or later) will yield a compile-time error because the compiler will detect that v.get(0) returns String instead of Integer. For a more elaborate example, see reference.[5]</p>
+
+<p>Here is a small excerpt from the definition of the interfaces List and Iterator in package java.util:</p>
+   <code>public interface List<E> { 
+    void add(E x);
+    Iterator<E> iterator();
+}
+
+public interface Iterator<E> { 
+    E next();
+    boolean hasNext();
+}</code>
+ </article>
+ </section>
+ <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article> 
+To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+<code>function greetMe(yourName) {
+  alert("Hello " + yourName);
+}
+greetMe("World");
+</code>
+
+Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
+ </article>
+ </section>
+ <section class="main-section" id="Generic class definitions">
+    <header>Generic class definitions</header>
+ <p>Here is an example of a generic Java class, which can be used to represent individual entries (key to value mappings) in a map:</p>
+   <code>public class Entry<KeyType, ValueType> {
+  
+    private final KeyType key;
+    private final ValueType value;
+
+    public Entry(KeyType key, ValueType value) {  
+        this.key = key;
+        this.value = value;
+    }
+
+    public KeyType getKey() {
+        return key;
+    }
+
+    public ValueType getValue() {
+        return value;
+    }
+
+    public String toString() { 
+        return "(" + key + ", " + value + ")";  
+    }
+
+}</code>
+ <p>This generic class could be used in the following ways, for example</p>  
+   <code>Entry<String, String> grade = new Entry<String, String>("Mike", "A");
+Entry<String, Integer> mark = new Entry<String, Integer>("Mike", 100);
+System.out.println("grade: " + grade);
+System.out.println("mark: " + mark);
+
+Entry<Integer, Boolean> prime = new Entry<Integer, Boolean>(13, true);
+if (prime.getValue()) System.out.println(prime.getKey() + " is prime.");
+else System.out.println(prime.getKey() + " is not prime.");</code>
+ <p>It outputs:</p>
+   <code>grade: (Mike, A)
+mark: (Mike, 100)
+13 is prime.</code>
+</section>
+  <section class="main-section" id="Diamond operator">
+    <header>Diamond operator</header>
+    <article>
+
+      <p>
+     Java SE 7 and above allow the programmer to substitute an empty pair of angle brackets (<>, called the diamond operator) for a pair of angle brackets containing the one or more type parameters that a sufficiently-close context implies.[8] Thus, the above code example using Entry can be rewritten as:
+      </p>
+      <code>Entry<String, String> grade = new Entry<>("Mike", "A");
+Entry<String, Integer> mark = new Entry<>("Mike", 100);
+System.out.println("grade: " + grade);
+System.out.println("mark: " + mark);
+
+Entry<Integer, Boolean> prime = new Entry<>(13, true);
+if (prime.getValue()) System.out.println(prime.getKey() + " is prime.");
+else System.out.println(prime.getKey() + " is not prime.");</code>
+</article>
+</section>
+<section class="main-section" id="Generics in throws clause">
+    <header>Generics in throws clause</header>
+    <article>
+     <p>Although exceptions themselves cannot be generic, generic parameters can appear in a throws clause:</p>
+<code>public <T extends Throwable> void throwMeConditional(boolean conditional, T exception) throws T {
+    if(conditional) {
+        throw exception;
+    }
+}</code>
+</article>
+</section>
+<section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://en.wikipedia.org/wiki/Generics_in_Java"> Wikipedia</a>
+    </article>
+    </section>
+</main> 
+
+</body>
+
+</html>

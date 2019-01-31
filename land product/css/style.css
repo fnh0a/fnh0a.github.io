@@ -1,0 +1,159 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400, 700';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff8e1;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 30px;
+}
+a:hover {
+  color: yellow;
+}
+
+img {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: lightgreen;
+  width: 100%;
+  height: 80px;
+}
+
+#nav-bar {
+  font-weight: 800px;
+  font-size: 25px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+}
+
+h1 {
+  margin: 30px;
+  word-wrap: break-word;
+  font-size: 40px;
+}
+
+#email {
+  max-width: 500px;
+  width: 100%;
+  height: 30px;
+}
+
+#submit {
+  max-width: 300px;
+  width: 100%;
+  height: 30px;
+  margin: 30px auto;
+  border: 0;
+  background-color: orange;
+}
+
+#features {
+  display: block;
+  margin: 30px auto;
+  text-align: left;
+  width: 900px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2vw;
+  padding: 8px;
+}
+
+.section-header{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#video {
+  width: 650px;
+  height: 350px;
+  margin: 30px auto;
+}
+
+#product-and-pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  height: 250px;
+  margin: 30px 30px 30px 30px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.level {
+  background-color: #FFF59D;
+  color: black;
+  padding: 15px 5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+ol {
+  margin: 15px 0;
+  li {
+    padding: 5px 0;
+  }
+}
+
+.btn {
+  border: 0;
+  margin: 15px 0;
+  padding: 0 20px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: lightgreen;
+  cursor: pointer;
+}
+.btn:hover {
+  color: black;
+}
+
+#footer {
+  padding: 20px;
+  background-color: lightgreen;
+  width: 100%;
+  height: 70px;
+}

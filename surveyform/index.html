@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Build a survey form</title>
+  
+      <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+
+  <h1 id="title">Customer Satisfaction Survey</h1>
+<div id="form-outer">
+  <p id="description">
+    please spare a few minutes of your valuable time to answer these simple question:
+  </p>
+  <form id="survey-form">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name"> Name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+      </div>
+    </div>
+     <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="age"> Age: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="100" class="input-field" placeholder="Age">
+</div>
+</div>
+   <div class="rowTab">
+     <div class="labels">
+     <label for="gender">Gender:</label>
+     </div>
+<div class="rightTab"> 
+  <ul style="list-style: none;">
+       <li class="radio"><label>Male<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+       <li class="radio"><label>Female<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+ </ul>
+</div>
+  <div class="rowTab">
+    <div class="labels">
+    <label id="email-label" for="email"> Email: </label>
+    </div>
+   <div class="rightTab">
+   <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+    </div>
+    </div>
+<div class="rowTab">
+   <div class="labels">
+   <label for="Occupation">Occupation:</label>
+   </div>
+<div class="rightTab">
+<select id="dropdown" name="Occupation" class="dropdown">
+   <option disabled value>Select an option</option>
+   <option value="Engineer">Engineer</option>
+   <option value="Teacher">Teacher</option>
+   <option value="Sales">Sales</option>
+   <option value="Office">Office</option>
+   <option value="service">Service</option>
+   <option value="other">Other</option>
+ </select>
+ </div>
+ </div>
+ <div class="rowTab">
+   <div class="labels">
+     <label for="userRating">Would you recommend our website to others?</label>
+   </div>
+   <div class="rightTab">
+     <ul style="list-style: none;">
+       <li class="radio"><label>Yes<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+       <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+       <li class="radio"><label>No<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+     </ul>
+  </div>
+  </div>
+ <div class="rowTab">
+   <div class="labels">
+     <label for="favorite">Which kind of product is your favorite in our website?</label>
+   </div>
+ <div class="rightTab">
+    <select id="favorite" name="favorite" class="dropdown">
+  <option disabled selected value>Select an option</option>
+  <option value="toys">Toys</option>
+  <option value="books">Books</option>
+  <option value="clothing">Clothing</option>
+  <option value="shoes">Shoes</option>
+  <option value="electronic product">Electronic product</option>
+  <option value="other">Other</option>
+ </select>
+  </div>
+ </div>
+  <div class="rowTab">
+   <div class="labels">
+    <label for="improve">Which aspects do we need to improve?</label>
+   </div>
+    <div class="rightTab">
+      <ul id="improve" style="list-style: none;">
+       <li class="checkbox"><label><input name="improve" value="1" type="checkbox" class="userRatings">more product options</label></li>
+       <li class="checkbox"><input name="improve" value="2" type="checkbox" class="userRatings">more promotion</li>
+       <li class="checkbox"><label><input name="improve" value="3" type="checkbox" class="userRatings">fast delivery</label></li>
+       <li class="checkbox"><label><input name="improve" value="4" type="checkbox" class="userRatings">safe and quick transaction</label></li>
+       <li class="checkbox"><label><input name="improve" value="5" type="checkbox" class="userRatings">easy return</label></li>
+</ul>
+</div>
+</div>
+<div class="rowTab">
+ <div class="labels">
+   <label for="suggestion">Any other suggestions?</label>
+   </div>
+<div class="rightTab">
+  <textarea id="suggestion" class="input-field" style="height:60px;resize:vertical;" name="suggention" placeholder="Enter your suggestions here..."></textarea>
+</div>
+</div>
+<button id="submit" type="submit">Submit</button>
+</form>
+</div> 
+
+</body>
+
+</html>

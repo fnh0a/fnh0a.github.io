@@ -56,7 +56,7 @@ nav ul li a:hover {
 }
 .skillset {
   display: block;
-  margin: 50px auto;
+  margin: 30px auto;
   width: 70%;
   min-width: 200px;
 }
@@ -180,4 +180,5 @@ footer {
 
 footer a {
   color: white;
+  text-decoration: none;
 }

@@ -1,0 +1,57 @@
+body {
+  background-color: #F5F5DC;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+}
+
+ #name{
+  font-family: 'Lobster', cursive;
+  font-size:2em;
+  text-align: center;
+}
+#reminder{
+   font-size:1.8em;
+   font-family: 'Lobster';
+   text-align: left;
+   margin-left:10px;
+   padding-left:10px;
+}
+
+ .col-sm-6{
+  color:#000000;
+  font-family:'Source Code Pro', monospace;
+  text-align:left;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  height:600px;
+  width: 500px;
+  position:relative;
+  display:block;
+  margin:0 10px 5% 10px;
+  padding:20px 20px;
+}
+
+#editor {
+  float:left;
+  background-color: #F0F4C3;
+}
+
+#preview{
+  float:right;
+  background-color:#E0E0E0;
+}
+
+.footer{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size:1.5em;
+}
+  .footer a {
+    font-weight:500;
+    text-decoration: none;
+    color: #E0E0E0;
+    margin-left:5px;
+  }
+
+

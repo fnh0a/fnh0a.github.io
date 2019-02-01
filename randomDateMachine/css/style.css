@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: relative;
+}
+
+body {
+  background-color: #ff9e80;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#title {
+  font-size: 2em;
+  font-family: "Lobster", cursive;
+  color: white;
+  text-align: center;
+}
+.footer {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 1.5em;
+}
+.footer a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #37474f;
+  margin-left: 7px;
+}
+
+.quote-box {
+  border-radius: 10px;
+  background-color: #f5f5dc;
+  display: block;
+  position: relative;
+  margin: 5% auto 5% auto;
+  width: 550px;
+  padding: 50px 50px;
+}
+
+.quote-text {
+  text-align: left;
+  line-height: 1.5;
+  display: inline-block;
+  width: 550px;
+  height: auto;
+  font-weight: 500;
+  font-size: 1.8em;
+}
+.quote-author {
+  padding-top: 20px;
+  text-align: right;
+  width: 550px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.buttons {
+  width: 550px;
+  margin: 30px auto 50px auto;
+  display: block;
+}
+#new-quote {
+  background-color: #ff9e80;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 1.2em;
+  height: 40px;
+  width: 120px;
+}
+
+#tweet-quote {
+  background-color: #ff9e80;
+  border-radius: 8px;
+  color: #000000;
+  padding: 0px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 5px;
+  height: 30px;
+  width: 40px;
+}
